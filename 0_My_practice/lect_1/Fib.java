@@ -15,6 +15,8 @@ public class Fib {
     }
     public static void main(String[] args) {
         System.out.println(fib(9));
+        Dog smallDog = new Dog(int 13);
+
     }
 
 }

@@ -43,12 +43,16 @@ public class ListExercisesTest {
         List<Integer> lst2 = List.of(4, 5, 6, 7, 8, 9);
         List<Integer> lst3 = new ArrayList<>();
         List<Integer> lstExpected = List.of(4, 5, 6);
+        List<Integer> lst4 = List.of(1,3,4,5,3,4,5);
+        List<Integer> lstExpected2 = List.of(1, 3, 4, 5);
 
         List<Integer> res1 = ListExercises.common(lst1, lst2);
         List<Integer> res2 = ListExercises.common(lst2, lst3);
+        List<Integer> res3 = ListExercises.common(lst4, lst1);
 
         assertThat(res1).isEqualTo(lstExpected);
         assertThat(res2).isEmpty();
+        assertThat(res3).isEqualTo(lstExpected2);
     }
 
     @Test
